@@ -11,3 +11,23 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+alias si='sudo dnf install'
+alias sd='sudo dnf remove'
+alias sdu='sudo dnf update'
+alias sdg='sudo dnf upgrade'
+alias vim="stty stop '' -ixoff; vim"
+alias docker="sudo docker"
+alias systemctl="sudo systemctl"
+alias sv='sudo vim'
+
+function mkcd(){
+    mkdir -p $1 && cd $1
+}
+
+export GOROOT="/usr/local/go"
+export GOPATH="$HOME/go"
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# xinput disable "SynPS/2 Synaptics TouchPad"
